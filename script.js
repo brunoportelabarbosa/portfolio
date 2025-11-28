@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('form-message');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
+    // --- Lógica do Formulário de Contato ---
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+            event.preventDefault();
 
-            // Validação dos campos
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
@@ -21,27 +23,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Simula o envio
-            formMessage.style.display = 'block';
             displayMessage('Mensagem enviada com sucesso! Em breve entrarei em contato.', 'success');
-            
-            // Limpa o formulário
             contactForm.reset();
         });
     }
 
-    // Função para validar e-mail
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
     }
 
-    // Função para exibir mensagens ao usuário
     function displayMessage(msg, type) {
         formMessage.textContent = msg;
-        // Limpa classes anteriores e adiciona as novas
         formMessage.className = '';
-        formMessage.classList.add('message', type);
+        formMessage.classList.add(type);
         formMessage.style.display = 'block';
+
+        // Esconde a mensagem após alguns segundos
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
+    }
+
+    // --- Lógica da Troca de Tema ---
+    if (themeToggle) {
+        // Verifica o tema salvo no localStorage ao carregar a página
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+
+            // Salva a preferência do tema no localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
     }
 });
