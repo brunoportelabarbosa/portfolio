@@ -116,6 +116,21 @@ button[type="submit"]:hover {
     padding: 10px;
     border-radius: 4px;
     font-weight: bold;
+    border: 1px solid transparent;
+}
+
+/* Classe para mensagem de sucesso */
+#form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* Classe para mensagem de erro */
+#form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
 }
 
 /* Rodapé */
@@ -128,6 +143,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 
 /* Responsividade básica para telas menores */
 @media (max-width: 768px) {
