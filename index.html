@@ -19,22 +19,87 @@
     </header>
 
     <main>
-        <section id="sobre">
+        <!-- Seção Sobre mim -->
+        <section id="sobre" class="section-content">
             <h1>Sobre mim</h1>
+            <p>Olá! Meu nome é Bruno Portela Barbosa e sou um entusiasta da tecnologia com grande interesse em Ciência de Dados e Desenvolvimento Web. Este portfólio é um reflexo do meu aprendizado e dedicação.</p>
+            <p>Atualmente, estou focado em aprimorar minhas habilidades em HTML5, CSS3 e JavaScript, buscando sempre as melhores práticas e soluções inovadoras.</p>
+            <h3>Hobbies:</h3>
+            <ul>
+                <li>Leitura de artigos científicos e livros sobre tecnologia.</li>
+                <li>Prática de esportes ao ar livre.</li>
+                <li>Exploração de novas linguagens de programação.</li>
+            </ul>
         </section>
 
-        <section id="formacao">
+        <!-- Seção Formação -->
+        <section id="formacao" class="section-content">
             <h2>Formação</h2>
+            <h3>Formação Acadêmica:</h3>
+            <ul>
+                <li>**Tecnologia em Ciência de Dados** - UNINTER (em andamento)</li>
+                <li>**[Sua formação anterior, ex: Graduação em X]** - [Nome da Instituição] (Ano de Conclusão)</li>
+            </ul>
+            <h3>Cursos Complementares:</h3>
+            <ul>
+                <li>**Desenvolvimento Web com HTML5 e CSS3** - [Plataforma/Instituição]</li>
+                <li>**Introdução ao JavaScript** - [Plataforma/Instituição]</li>
+                <li>**[Outro curso relevante, ex: Python para Análise de Dados]** - [Plataforma/Instituição]</li>
+            </ul>
+            <h3>Idiomas:</h3>
+            <ul>
+                <li>Português (Nativo)</li>
+                <li>Inglês (Intermediário)</li>
+            </ul>
         </section>
 
-        <section id="portfolio">
+        <!-- Seção Portfólio -->
+        <section id="portfolio" class="section-content">
             <h2>Portfólio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <h3>Projeto 1: Título do Projeto</h3>
+                    <p>Breve descrição do projeto, tecnologias utilizadas (HTML, CSS, JS).</p>
+                    <a href="#" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Projeto 2: Título do Projeto</h3>
+                    <p>Breve descrição do projeto, tecnologias utilizadas (HTML, CSS, JS).</p>
+                    <a href="#" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Projeto 3: Título do Projeto</h3>
+                    <p>Breve descrição do projeto, tecnologias utilizadas (HTML, CSS, JS).</p>
+                    <a href="#" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
         </section>
 
-        <section id="contato">
+        <!-- Seção Contato -->
+        <section id="contato" class="section-content">
             <h2>Contato</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div id="form-message" style="display: none;"></div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Bruno Portela Barbosa. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
